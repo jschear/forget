@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Forget</title>
+    <style type="text/css">
+      body {
+        margin: 12px;
+        white-space: nowrap;
+      }
+
+      #dropdown, #done {
+        margin-left: 4px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <span>Maybe</span>
+    <select id="dropdown">
+      <option value="day">today</option>
+      <option selected value="week">this week</option>
+      <option value="month">this month</option>
+    </select>
+    <button id="done" type="button" tabindex="1">&#x2714;</button>
+  </body>
+</html>

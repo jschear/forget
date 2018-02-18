@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Forget",
+  "description": "Faulty bookmarking.",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Remember for a while"
+  },
+  "background": {
+    "scripts": [
+      "moment.min.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "bookmarks",
+    "storage",
+    "alarms"
+  ]
+}
