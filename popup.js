@@ -13,8 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   doneButton.addEventListener('click', () => {
     var duration = durationSelect.options[durationSelect.selectedIndex].value;
     getCurrentTab((tab) => {
-      chrome.extension.getBackgroundPage().addBookmark(tab, duration);
-      window.close();
+      chrome.runtime.getBackgroundPage((background) => {
+        background.addBookmark(tab, duration);
+        window.close();
+      })
     });
   });
 });
